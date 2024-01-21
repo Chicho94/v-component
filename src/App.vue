@@ -1,15 +1,19 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+<vmHome></vmHome>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import vmHome from './components/Home.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    vmHome
+  },
+  data(){
+    return{
+      show: false,
+    }
   }
 }
 </script>
@@ -22,5 +26,15 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.fade-enter-from,
+.fade-leave-to{
+  opacity: 0;
+}
+
+.fade-leave-active,
+.fade-enter-active{
+  transition: opacity 0.5s ease;
 }
 </style>
